@@ -8,3 +8,4 @@ buildscript {
             classpath(Dependencies.hiltAgp)
       }
 }
+

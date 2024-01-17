@@ -3,16 +3,19 @@ plugins {
       id("org.jetbrains.kotlin.android")
 }
 
+// MainGradlePlugin 插件不能应用到应用程序级别模块
+// 因为该插件并不是一个库，但是我们可以替换参数
+
 android {
       namespace = "com.hgm.dependencymanagement"
-      compileSdk = 34
+      compileSdk = ProjectConfig.compileSdk
 
       defaultConfig {
-            applicationId = "com.hgm.dependencymanagement"
-            minSdk = 26
-            targetSdk = 33
-            versionCode = 1
-            versionName = "1.0"
+            applicationId = ProjectConfig.appId
+            minSdk = ProjectConfig.minSdk
+            targetSdk = ProjectConfig.targetSdk
+            versionCode = ProjectConfig.versionCode
+            versionName = ProjectConfig.versionName
 
             testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
             vectorDrawables {
@@ -40,7 +43,7 @@ android {
             compose = true
       }
       composeOptions {
-            kotlinCompilerExtensionVersion = "1.4.3"
+            kotlinCompilerExtensionVersion = Versions.composeCompiler
       }
       packaging {
             resources {

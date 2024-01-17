@@ -6,14 +6,11 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import com.hgm.dependencymanagement.ui.theme.DependencyManagementTheme
 
 /**
- *    如何在多模块中管理不同的依赖项
+ *    如何自定义Gradle插件共享项目配置
  **/
 class MainActivity : ComponentActivity() {
       override fun onCreate(savedInstanceState: Bundle?) {
